@@ -1,0 +1,41 @@
+// Section More
+//
+//
+
+.section-more {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: rem(240px);
+  margin-top: rem($vertical-margin-1);
+  color: #ffffff;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  .more-title {
+    margin-top: rem(6px);
+    font-size: rem(26px);
+    line-height: 1;
+    font-weight: 400;
+  }
+  .btn {
+    margin-top: rem(25px);
+  }
+
+  &.brand-more {
+    background-image: url('../img/section-more-brand.jpg');
+  }
+  &.igarten {
+    background-image: url('../img/section-more-igarten.jpg');
+  }
+  &.april {
+    background-image: url('../img/section-more-april.jpg');
+  }
+  &.institute {
+    background-image: url('../img/section-more-institute.jpg');
+  }
+}
+

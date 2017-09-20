@@ -1,0 +1,145 @@
+// Brand Interview
+//
+//
+
+.brand-interview {
+  background: $brand-bg-color;
+  @extend %section-margin-narrow;
+  padding-right: rem(80px);
+  padding-left: rem(80px);
+  .container-flex {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+}
+
+.interview-q {
+  padding-right: 1px;
+  text-align: center;
+  .inner {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: rem(25px);
+    background: $bg-navy2;
+  }
+  .heading-2 {
+    margin: rem(20px) 0 rem(35px);
+    color: $text-color-silver;
+    line-height: 1;
+  }
+}
+
+.interview-q-list {
+  counter-reset: interview-counter;
+  li {
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid $brand-bg-color;
+    font-size: $font-size-lead;
+    line-height: rem(99px);
+    color: $text-color-silver;
+    &:before {
+      content: counter(interview-counter);
+      counter-increment: (interview-counter);
+      position: absolute;
+      left: 2em;
+      margin-top: .1em;
+      @extend %eng;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+  a {
+    display: block;
+    height: rem(100px);
+    color: inherit;
+  }
+  .active {
+    background: #fff;
+    color: $bg-navy2;
+    font-weight: 400;
+    &:before {
+      color: $text-color-dark;
+    }
+  }
+}
+
+.inerview-a {
+  background: #fff;
+  .interview-slider,
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item,
+  .item {
+    height: 100%;
+  }
+  .item {
+    min-height: 600px; // mac safari bug fix
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .inner {
+    width: 100%; // ie11, 10 bug fix
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  .question,
+  .answer {
+    position: relative;
+    margin-left: rem(40px);
+    margin-right: rem(40px);
+    &:before {
+      position: absolute;
+      right: 100%;
+      display: inline-block;
+      width: rem(40px);
+      text-align: center;
+      font-size: rem(30px);
+      font-weight: 700;
+      transform: translate(-5px, 0);
+    }
+  }
+  .question {
+    margin-bottom: rem(30px);
+    font-size: rem(28px);
+    font-weight: 400;
+    line-height: 1;
+    &:before {
+      content: 'Q';
+      top: -.1em;
+    }
+  }
+  .answer {
+    &:before {
+      content: 'A';
+      top: -.24em;
+      color: $brand-text-color;
+    }
+    .lead {
+      display: block;
+      margin-bottom: rem(15px);
+      color: $brand-text-color;
+      font-size: $font-size-lead;
+      span {
+        padding-bottom: rem(4px);
+        border-bottom: 1px solid $brand-text-color;
+      }
+    }
+    .source {
+      display: block;
+      margin-top: rem(40px);
+      color: $brand-text-color;
+      font-weight: 400;
+      &:before, &:after {
+        content: '<';
+        display: inline;
+      }
+      &:after {
+        content: '>';
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+// Brand Solution
+//
+//
+
+.brand-solution {
+  @extend %section-margin-mixed;
+  text-align: center;
+  video {
+    margin-top: rem(80px);
+  }
+}

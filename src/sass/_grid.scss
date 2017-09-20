@@ -1,0 +1,32 @@
+// Grid
+//
+//
+
+
+.container {
+  @extend %clearfix;
+  &.col2 {
+    > .col {
+      width: 50%;
+    }
+  }
+   &.col3 {
+    > .col {
+      width: 33.3%;
+    }
+  }
+  .col {
+    float: left;
+    box-sizing: border-box;
+  }
+}
+
+
+.container-flex {
+    display:flex;
+    &.col2 {
+      > .col {
+        width:50%;
+      }
+    }
+}
