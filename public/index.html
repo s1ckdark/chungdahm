@@ -36,7 +36,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1505795480542">
+  <link rel="stylesheet" href="./css/style.css?v=1508395223487">
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -123,6 +123,42 @@
 <body>
   <input type="hidden" id="jaHeightSec" value="20">
   <div id="viewport" class="viewport">
+    <!-- 상단공통 -->
+    <div id="roof" class="rooftop">
+      <script>
+        layout.gnb.renderHtml();
+        $(function() {
+          $(".rooftop").addClass("on");
+
+          // header - 공유 설정
+          $(".sns-share-box .sns-more").on("click", function() {
+            $("#snsMore").toggleClass("open");
+            return false;
+          });
+        });
+      </script>
+      <div class="forehead">
+        <div class="inner">
+          <div class="brandsolution-logo"><a href="/" title="Innovation Lab"></a></div>
+          <div class="brand-identity"><a href="#viewport"><img src="./img/header-logo.svg" alt="청담러닝" height="16"></a></div>
+          <div class="sns-share-box">
+            <ul>
+              <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;facebook&#39;);" class="sns-fb" title="facebook"></a></li>
+              <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;twitter&#39;);" class="sns-tw" title="twitter"></a></li>
+              <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;kakaostory&#39;);" class="sns-ks" title="kakaostory"></a></li>
+              <li><a href="javascript:void(0)" class="sns-more" title="더 보기"></a></li>
+            </ul>
+            <div id="snsMore" class="sns-more-box">
+              <ul>
+                <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;googleplus&#39;);" class="sns-gp" title="googleplus"><i></i>구글+</a></li>
+                <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;pinterest&#39;);" class="sns-pt" title="pinterest"><i></i>핀터레스트</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //상단공통 -->
     <div id="brand-top" class="brand-top ja_section_wrap" ja-section-title="청담러닝 브랜드">
       <div id="brand-slider" class="brand-slider">
         <div class="item brand"></div>
@@ -508,6 +544,10 @@
     </div>
     <div class="igarten-talk ja_section_wrap" ja-section-title="아이가르텐 이메일 QnA">
       <div class="wrapper">
+        <div id="video-brand-igarten" class="video-play brand-video">
+          <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster1.jpg');"></a>
+          <video></video>
+        </div>
         <div class="igarten-talk-icon"></div>
         <header class="section-header">
           <p class="sub-title colored-igarten">‘영희’와 같은 고민을 하는 이 시대 학부모와의 e메일 Q&amp;A</p>
@@ -834,6 +874,10 @@
     </div>
     <div class="april-ctp ja_section_wrap" ja-section-title="에이프릴 CTP">
       <div class="wrapper">
+        <div id="video-brand-april" class="video-play brand-video">
+          <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster1.jpg');"></a>
+          <video></video>
+        </div>
         <header class="section-header">
           <h2 class="heading-1 colored-april">Creative Thinking Project로 기르는 <strong>창의 사고력</strong></h2>
         </header>
@@ -1433,12 +1477,16 @@
       </div>
     </section>
     <section id="section1" class="ja_section_wrap institute-remark" ja-section-title="청담어학원 밀착 관찰기">
-      <header class="section-header remark-title">
-        <span class="institute_remark_icon"></span>
-        <span class="sub-title">청담어학원 밀착 관찰기 </span>
-        <h2 class="title colored-institute">어학원, 그 이상의 어학원</h2>
-      </header>
       <div class="wrapper">
+        <div id="video-brand-institute" class="video-play brand-video">
+          <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster1.jpg');"></a>
+          <video></video>
+        </div>
+        <header class="section-header remark-title">
+          <span class="institute_remark_icon"></span>
+          <span class="sub-title">청담어학원 밀착 관찰기 </span>
+          <h2 class="title colored-institute">어학원, 그 이상의 어학원</h2>
+        </header>
         <div class="contents container col2">
           <div class="titleOfContents col">
             <p>자녀가 어느 학원에<br>다니는지 아시나요</p>
@@ -2064,7 +2112,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>-->
     <script src="./js/lib/SplitText.min.js"></script>
     <script src="./js/lib/Draggable.min.js"></script>
-    <script src="./js/script.js?v=1505795480542"></script>
+    <script src="./js/script.js?v=1508395223487"></script>
 </body>
 
 </html>
