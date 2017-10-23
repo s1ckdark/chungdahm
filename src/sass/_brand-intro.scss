@@ -6,6 +6,7 @@
   @extend %section-margin-base;
   background-color: $bg-gray1;
   .top {
+    position:relative;
     margin-bottom: rem($vertical-margin-2);
     .display-1 {
       margin-bottom: rem(45px);

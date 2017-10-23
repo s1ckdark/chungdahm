@@ -26,6 +26,9 @@
       background-size: contain;
     }
   }
+  &.brand-video {
+    margin:0 0 rem(30px);
+  }
   video {
     display: block;
     width: 100%;

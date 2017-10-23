@@ -21,40 +21,51 @@ $(function(){
     $(this).hide().next('video')[0].play();
   });
 
+ // video
   var $video1 = $('#video-brand1');
   var $video2 = $('#video-brand2');
-  // video ovp 연결
-  // $video1.find('video').fnSetVideo({
-  //   'ovpUrl': 'http://v.ovp.joins.com/b0r0MCCQ',
-  //   'poster': '',
-  //   'preload': false,
-  //   'ovpRo': 1, // 1 = 16:9, 2 = 1:1
-  //   'ctrls': true,
-  //   'volume':1
-  // });
-  // $video2.find('video').fnSetVideo({
-  //   'ovpUrl': 'http://v.ovp.joins.com/hAc0MCDU',
-  //   'poster': '',
-  //   'preload': false,
-  //   'ovpRo': 1, // 1 = 16:9, 2 = 1:1
-  //   'ctrls': true,
-  //   'volume':1
-  // });
+  var $video3 = $('#video-igaraten');
+  var $video4 = $('#video-april');
+  var $video5 = $('#video-institute');
 
   $video1.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/s0cW5nYzE6g8tOxwqdkBqKlGIhA8xQVh/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'src': 'http://cf.c.ooyala.com/s0cW5nYzE6g8tOxwqdkBqKlGIhA8xQVh/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
     'controls':true,
     'controlsList':'nodownload',
-    'preload':'none',
+    'preload':'auto',
     'loop':false,
     'poster': ''
   });
 
   $video2.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
     'controls':true,
     'controlsList':'nodownload',
-    'preload':'none',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  });
+  $video3.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  });
+  $video4.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  });
+  $video5.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
     'loop':false,
     'poster': ''
   });

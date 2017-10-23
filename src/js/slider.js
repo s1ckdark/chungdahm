@@ -26,6 +26,15 @@ $(function(){
     $articleSlider.trigger('next.owl.carousel');
   });
 
+  var $totalSlider = $('#brand-total-slider').owlCarousel({
+    loop: true,
+    nav: true,
+    dots: true,
+    autoWidth: true,
+    margin: 20,
+  });
+
+
   // brand interview slider
   //
   var $interviewSlider = $('#interview-slider').owlCarousel({
