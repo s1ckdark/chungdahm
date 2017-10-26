@@ -23,8 +23,8 @@ $(function(){
 
  // video
   var $video1 = $('#video-brand1');
-  var $video2 = $('#video-brand2');
-  var $video3 = $('#video-igaraten');
+  // var $video2 = $('#video-brand2');
+  var $video3 = $('#video-igarten');
   var $video4 = $('#video-april');
   var $video5 = $('#video-institute');
 
@@ -37,39 +37,40 @@ $(function(){
     'poster': ''
   });
 
-  $video2.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
-    'controls':true,
-    'controlsList':'nodownload',
-    'preload':'auto',
-    'loop':false,
-    'poster': ''
-  });
+  // $video2.find('video').attr({
+  //   'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+  //   'controls':true,
+  //   'controlsList':'nodownload',
+  //   'preload':'auto',
+  //   'loop':false,
+  //   'poster': ''
+  // });
   $video3.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'src': 'http://cf.c.ooyala.com/dqdmk1ZDE6cnZ8mi4F1KSP3-VYhwLExi/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
     'controls':true,
     'controlsList':'nodownload',
     'preload':'auto',
     'loop':false,
     'poster': ''
-  });
+  }); // igarten 비디오
   $video4.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'src': 'http://cf.c.ooyala.com/htdWk1ZDE60Ipabs-ST8O5t9Vnff3brB/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
     'controls':true,
     'controlsList':'nodownload',
     'preload':'auto',
     'loop':false,
     'poster': ''
-  });
+  }); // april 비디오
   $video5.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/84cW5nYzE6_psmoDsuHmTCrGIUyISTyu/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'src': 'http://cf.c.ooyala.com/F2dmk1ZDE6PaTpmoKwaSLu9XqgM84Imm/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
     'controls':true,
     'controlsList':'nodownload',
     'preload':'auto',
     'loop':false,
     'poster': ''
-  });
-
+  }); // 청담어학원 비디오
+// src/html/mobile 에 있는  _institute.html, _april.html, _igarten.html 에서 video로 검색해서 
+// style로 background 처리되어있는 포스터 이미지를 교체.
   //
   // Brand QnA / Interview
   //

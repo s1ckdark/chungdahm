@@ -16,7 +16,7 @@ const del = require('del');
 
 const folders = ['.', 'mobile']; // 웹, 모바일 페이지별로 폴더 분리. 폴더 내 리소스 폴더 구조는 동일함.
 
-const baseurl = 'http://innovationlab.co.kr/innovation/chungdahm'; // project url
+const baseurl = 'http://innovationlab.co.kr/innovation/chungdahm2'; // project url
 
 // run template engines
 gulp.task('html', function () {
@@ -34,13 +34,13 @@ gulp.task('html', function () {
         version: date.getTime(), // CSS, JS 파일 캐시용 버전
         viewport_width: '1024', // pc 버전은 프로젝트마다 넓이가 상이함. mobile은 device-width으로 설정
         brand: '청담러닝', // header logo 이미지에 들어가는 대체 텍스트
-        title: '우리 아이가 만날 미래 <청담러닝X중앙일보 이노베이션랩>',
+        title: '우리 아이가 만날 미래',
         description: '4차산업혁명 시대다. 인공지능은 우리 아이들의 동반자이자 경쟁자이다. 새로운 시대를 살게 될 우리 아이들은 새로운 질서를 만들어야 한다. 부모 세대와는 다른 것을 배워야 한다.',
         keyword: '청담러닝,에이프릴어학원,에이프릴 어학원,에이프릴,아이가르텐,i-GARTEN,April 어학원,영어학원,초등 영어 교육,영유아 영어,영유아 영어학원,초등 영어학원,영어 유치원,영어유치원,April,청담,청담어학원,청담 어학원,창의,수능,절대평가,창의력,창의성,협업,소통,학생부 종합전형,아이플레이,아이 플레이,i-play,크리에이티브,Creative thinking project,구글,인재선발,신입생 선발 기준,논술,개정 교육과정,영어,영어를 배우는 이유,프로젝트 러닝,영어 문법,영어 내신,미래형 인재,21세기 인재,인공지능,AI,일자리,특목고,입시,상대평가,창의성 예술,공감 능력,예술 과학 창의성,청담러닝 커리큘럼,커리큘럼,청담러닝 원어민 강사,원어민 강사,누리과정,융합,노벨상,창의 융합,미셸 루트번스타인,영어 사용,영어,스토리텔링',
         og_image: baseurl + '/img/og-image.jpg', // 최적 사이즈 1200x628px
         og_article_author: '', // An array of Facebook profile URLs or IDs
         og_article_publisher: 'https://www.facebook.com/joongang', // A Facebook page URL or ID
-        dablena_init: 'www.chungdahm.com', // client website
+        dablena_init: 'www.innovationlab.co.kr', // client website
       }))
       .pipe(htmlbeautify(options)) // beautify HTML files
       .pipe(gulp.dest('public/' + element + '/'))

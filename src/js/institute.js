@@ -34,7 +34,7 @@ var $interview = $('.interview_face'), vw = $('#viewport').width();
    var tl = new TimelineMax({paused:true})
       .staggerFromTo(ele, .1, {visibility:'hidden',opacity:0}, {visibility:'visible',opacity:1},.1)
       .staggerTo(overlay, .5, {visibility:'visible',opacity:1},.1)
-      .staggerFromTo(arrow, .1, {visibility:'hidden',opacity:0}, {visibility:'visible',opacity:1,ease: Power3.easeIn},.6);
+      .staggerTo(arrow, .5, {className:'+=active',autoAlpha:1,width:'+=50%',ease: Power3.easeOut},.1);
   element.animation = tl;
 });
 $('.interview_face').hover(over, out);
@@ -71,9 +71,9 @@ var tl = new TimelineMax()
   .staggerFromTo('#interview2 .interview_content', .1, {display:'none'}, {display:'block'},.1)
   .staggerFromTo('#interview2 .interview_navi',.1, {display:'none'}, {display:'block'},.1)
   .staggerFromTo('#interview1', .1, {left:0}, {left:-l2}, .1)
-  .staggerFromTo('#interview2 .interview_cover', .1, {visibility:'visible',opacity:1}, {visibility:'hidden',opacity:0},.1)
-  .staggerFromTo('#interview2 .interview_arrow', .1, {width:'100%',opacity:0,visibility:'hidden',left:'50%'}, {width:'100%',opacity:1,visibility:'visible',left:0},.1)
-  .staggerFromTo('#interview2 .interview_hover', .1, {visibility:'hidden',opacity:0}, {visibility:'visible',opacity:1},.1);
+  .staggerFromTo('#interview2 .interview_cover', .1, {visibility:'visible',opacity:1, ease: Elastic.easeInOut.config(1, 0.5)}, {visibility:'hidden',opacity:0, ease: Elastic.easeInOut.config(1, 0.5)},.1)
+  .staggerFromTo('#interview2 .interview_arrow', .1, {width:'100%',opacity:0,visibility:'hidden',left:'50%', ease: Elastic.easeInOut.config(1, 0.5)}, { ease: Elastic.easeInOut.config(1, 0.5),width:'100%',opacity:1,visibility:'visible',left:0},.1)
+  .staggerFromTo('#interview2 .interview_hover', .1, {visibility:'hidden',opacity:0, ease: Elastic.easeInOut.config(1, 0.5)}, {visibility:'visible',opacity:1, ease: Elastic.easeInOut.config(1, 0.5)},.1);
 });
 
 $('#interview3 .interview_face, #interview1 .prev-interview-arrow, #interview2 .next-interview-arrow').click(function(){
@@ -84,9 +84,9 @@ var tl = new TimelineMax()
   .staggerFromTo('#interview3 .interview_content', .1, {display:'none'}, {display:'block'},.1)
   .staggerFromTo('#interview3 .interview_navi',.1, {display:'none'}, {display:'block'},.1)
   .staggerFromTo('#interview1', .1, {left:0}, {left:-l2}, .1)
-  .staggerFromTo('#interview3 .interview_cover', .1, {visibility:'visible',opacity:1}, {visibility:'hidden',opacity:0},.1)
-  .staggerFromTo('#interview3 .interview_arrow', .1, {width:'100%',opacity:0,visibility:'hidden',left:'50%'}, {width:'100%',opacity:1,visibility:'visible',left:0},.1)
-  .staggerFromTo('#interview3 .interview_hover', .1, {visibility:'hidden',opacity:0}, {visibility:'visible',opacity:1},.1);
+  .staggerFromTo('#interview3 .interview_cover', .1, {visibility:'visible',opacity:1, ease: Elastic.easeInOut.config(1, 0.5)}, {visibility:'hidden',opacity:0, ease: Elastic.easeInOut.config(1, 0.5)},.1)
+  .staggerFromTo('#interview3 .interview_arrow', .1, {width:'100%',opacity:0,visibility:'hidden',left:'50%', ease: Elastic.easeInOut.config(1, 0.5)}, { ease: Elastic.easeInOut.config(1, 0.5),width:'100%',opacity:1,visibility:'visible',left:0},.1)
+  .staggerFromTo('#interview3 .interview_hover', .1, {visibility:'hidden',opacity:0, ease: Elastic.easeInOut.config(1, 0.5)}, {visibility:'visible',opacity:1, ease: Elastic.easeInOut.config(1, 0.5)},.1);
 });
 
 $('.close-interview-circle').click(function(){
@@ -220,7 +220,7 @@ function upTween(e, hook){
 // upTween('#institute_section .sub-title','#institute_section .sub-title');
 // upTween('#institute_section p','#institute_section p');
 // upTween('#institute_section h2','#institute_section h2');
-// upTween('.infoSVG span','.infoSVG span');
+upTween('.infoSVG span','.infoSVG span');
 upTween('blockquote.quote','blockquote.quote');
 
 
@@ -229,9 +229,9 @@ var outerHandle = $('.handle .outer');
 var innerHandle = $('.handle .inner');
 var tweenDuration = .5;
 var staggerDelay = tweenDuration * .5;
-var handle = new TimelineMax({repeat:-1,yoyo:true});
-  handle.staggerFromTo(innerHandle, tweenDuration,{scale:2,ease:Linear.easeInOut}, {scale:1,ease:Linear.easeInOut},staggerDelay)
-        .staggerFromTo(outerHandle, tweenDuration, {scale:1,ease:Linear.easeInOut}, {scale:2,ease:Linear.easeInOut},staggerDelay);
+var handle = new TimelineMax({repeat:-1});
+  handle.staggerFromTo(innerHandle, tweenDuration,{scale:2,ease:Linear.easeIn,opacity:.5}, {scale:1,ease:Linear.easeOut,opaicty:0},staggerDelay)
+        .staggerFromTo(outerHandle, tweenDuration, {scale:1,ease:Linear.easeIn,opacity:.5}, {scale:2,ease:Linear.easeOut,opaicty:0},staggerDelay);
 
 
   var dragslider = $('.selection-slider');

@@ -86,20 +86,22 @@
 				}
 			}
 			.interview_arrow {
-					background-color:#fff;
+				background-color:#fff;
 					display:block;
-					width:50%;
+					width:0%;
 					height:2px;
 					position:absolute;
 					top:0px;
+					left:0px;
+					&.active {
 					left:50%;
-					visibility:hidden;opacity:0;
 					&:before {
 						position:absolute;
 						content:'';top:rem(-9px);right:0px;background-size:cover;
 						width:rem(12px);height:rem(20px);
 						background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAQAAAAT+RSaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCQgKCzL/3CWEAAAA3klEQVQY012RMUtCYRSG33uvCLkEkdDW2CDi2uKSY4gICYo/wVXQ/yAIYiENOdTuLjSEzY39gLYmB+NBbl44DhfRe84ZDjwPnO+c74gy71wgn6GmqulDV3IRqqNvlbXStTOIS74wfrg5bZWWcz4xfql4IQosMdbceiHyLDD+uPNCRLxibKl7IQKeMP7poFxmRFNPGw31prPQL6aVEkWq+q+4J8aYE2VxgxjjhTD7eJMY45kgO9UDMcYsxUfRYofxeMAH0SbBmBxxKrokGONTjESJBGPkLxgg9VXUwO+5B8fB4Qgi+50BAAAAAElFTkSuQmCC');}
 					}
+				}
 			.interview_title {font-size:rem(28px);line-height:1.4;margin:rem(20px) 0;display:block;font-weight:500;}
 			.interview_who {font-size:rem(18px);font-family:$font-family-eng;font-weight:500;}
 		}
