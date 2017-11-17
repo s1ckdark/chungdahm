@@ -25,7 +25,7 @@ gulp.task('html', function () {
   };
   var date = new Date();
 
-  // 웹, 모바일 폴더 별로 처리하기
+  // separte folder web and mobile
   var tasks = folders.map(function(element){
     return gulp.src('src/' + element + '/html/**/!(_)*.html')
       .pipe(nunjucks.compile({

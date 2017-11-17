@@ -16,19 +16,6 @@ var controller = new ScrollMagic.Controller();
 window.addEventListener('load', initScrollMagic);
 
 function initScrollMagic() {
-  // Scene 샘플
-  // var scene = new ScrollMagic.Scene(
-  //   {
-  //     triggerElement: '#trigger,
-  //     triggerHook: 0, // 'onLeave' 0, 'onCenter' 0.5, 'onEnter' 1
-  //     duration: 100, // '100%' = screen height
-  //     offset: -100,
-  //   })
-  //   .setTween('#target', 1, {width: 100, ease: Linear.easeNone})
-  //   .setPin('#sample')
-  //   .setClassToggle('#sample', 'active')
-  //   .addTo(controller);
-
   // 4C 인재 텍스트 색상 채우기
   var $person4c = $('#person-4c-color');
   new ScrollMagic.Scene(
@@ -136,35 +123,6 @@ function initScrollMagic() {
       })
       .addTo(controller);
   });
-  // new ScrollMagic.Scene(
-  //   {
-  //     triggerElement: $video2[0],
-  //     duration: $video2.height(),
-  //   })
-  //   .on('enter leave', function(event){
-  //     var $video = $video2;
-  //     var video = $video.find('video')[0];
-  //     var timer;
-  //     if (event.type === 'enter') {
-  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
-  //         var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
-
-  //         if (!isPlaying) {
-  //           $video.find('.play').click(); // play
-  //         }
-  //       }, 300);
-  //     } else {
-  //       if (timer) {
-  //         clearTimeout(timer);
-  //       }
-  //       if (video.played) {
-  //         video.pause(); // pause
-  //       }
-  //     }
-  //   })
-  //   .addTo(controller);
-    
-
   scrollToSection();
 }
 

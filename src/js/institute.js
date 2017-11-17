@@ -196,8 +196,9 @@ function frontPageInitSelection($container){
 }
 
 //
-
+if($('#drag-slider').length == 1){
 frontPageInitSelection($('#drag-slider'));
+}
 
 function upTween(e, hook){
      var $e = $(e);
